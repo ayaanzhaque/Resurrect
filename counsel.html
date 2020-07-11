@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic - Spectral by HTML5 UP</title>
+		<title>Resurrect - Counseling</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -21,7 +21,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="index.html">Ressurect</a></h1>
+						<h1><a href="index.html">Resurrect</a></h1>
 						<nav id="nav">
 							<ul>
 								<li class="special">
@@ -29,9 +29,9 @@
 									<div id="menu">
 										<ul>
 											<li><a href="index.html">Home</a></li>
-											<li><a href="dead.html">Dead</a></li>
-											<li><a href="celebrity.html">Celebrity</a></li>
-											<li><a href="counsel.html">Counsel</a></li>
+											<li><a href="dead.html">Recreate your Friends</a></li>
+											<li><a href="celebrity.html">Meet a Celebrity</a></li>
+                      <li><a href="counsel.html">Receive Counseling</a></li>
 										</ul>
 									</div>
 								</li>
@@ -42,7 +42,7 @@
 				<!-- Main -->
 					<article id="main">
 						<header>
-							<h2>Counselling</h2>
+							<h2>Receive Counseling</h2>
 							<p>Seek assistance from experts and the community</p>
 						</header>
 
@@ -58,21 +58,55 @@
 						</div>
 							<!--End Website Toolbox Forum Embed Code-->
 
-							<section class="ftco-section bg-light">
+							<!--<section class="ftco-section bg-light">
 					    	<div class="container">
 					    		<div class="row justify-content-center mb-5 pb-3">
 					          <div class="col-md-7 text-center heading-section ftco-animate">
 					            <h2 class="mb-4">Your Map</h2>
 					          </div>
 					        </div>
-
-
-
 					        <div id="map"></div>
 					        <script src="js/google-map.js"></script>
 					        <script async defer
 					        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjWfWoYtAhvc6i9C4V5SekngUKeyXOYoc&callback=initMap">
-					        </script>
+								</script> -->
+								<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var uluru = {lat: -25.344, lng: 131.036};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaM3yPKQbeD8SIs8-WNrM_Tt1rgTb5u3g&callback=initMap">
+    </script>
+  </body>
+</html>
 					    <!-- ORIGINAL CODE FROM TEMPLATE MAY BE USEFUL LATER
 					    		<div class="row d-flex">
 						        <div class="col-lg-3 col-md-6 ftco-animate">
@@ -152,12 +186,13 @@
 
 				<!-- Footer -->
 				<footer id="footer">
-					<h2>Ressurect</h2>
+					<h2>Resurrect</h2>
+					<p>Using NLP Generative Models to bring people back</p>
 					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://www.instagram.com/viraajreddi/" class="icon brands fa-instagram"><span class="label">Email</span></a></li>
+						<li><a href="#" class="icon brands fa-snapchat"><span class="label">Snapchat</span></a></li>
+						<li><a href="https://www.facebook.com/adithya.peruvemba.3" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/yaanhaque/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 					</ul>
 				</footer>
 
