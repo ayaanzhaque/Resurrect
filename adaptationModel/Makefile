@@ -1,7 +1,7 @@
 # Interact Variables
 # defaults
-CHECKPOINT_DIR = "runs/dad-bot"
-DATA = "data/dad_combined.json"
+CHECKPOINT_DIR = "runs/adaptationModel"
+DATA = "data/imessage_with_dad.json"
 TEMPERATURE = 0.7
 MAX_LENGTH = 30
 MAX_HISTORY = 2

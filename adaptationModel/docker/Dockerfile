@@ -18,11 +18,11 @@ RUN apt-get install -y \
     python3-pip
 
 # set local timezone
-RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime && \
+RUN ln -fs /usr/share/zoneinfo/America/Los_Angeles /etc/localtime && \
     dpkg-reconfigure --frontend noninteractive tzdata
 
 # transfer-learning-conv-ai
-ENV PYTHONPATH /usr/local/lib/python3.6 
+ENV PYTHONPATH /usr/local/lib/python3.6
 COPY . .
 COPY docker/requirements.txt /tmp/requirements.txt
 RUN pip3 install -r /tmp/requirements.txt
@@ -33,5 +33,5 @@ RUN mkdir models && \
     cd models/ && \
     tar -xvzf finetuned_chatbot_gpt.tar.gz && \
     rm finetuned_chatbot_gpt.tar.gz
-    
+
 CMD ["bash"]
