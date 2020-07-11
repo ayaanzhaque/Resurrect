@@ -1859,7 +1859,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			box-shadow: 0 0 0 2px #21b2a6;
+			box-shadow: 0 0 0 2px #070332;
 		}
 
 	select {
@@ -1956,7 +1956,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			box-shadow: 0 0 0 2px #21b2a6;
+			box-shadow: 0 0 0 2px #070332;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2817,7 +2817,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #21b2a6;
+			background-color: #070332;
 			color: #c8ece9;
 		}
 
@@ -2870,7 +2870,7 @@ input, select, textarea {
 
 				.wrapper.style1 select option {
 					color: #ffffff;
-					background: #21b2a6;
+					background: #070332;
 				}
 
 			.wrapper.style1 input[type="checkbox"] + label,
@@ -2886,7 +2886,7 @@ input, select, textarea {
 			.wrapper.style1 input[type="checkbox"]:checked + label:before,
 			.wrapper.style1 input[type="radio"]:checked + label:before {
 				background: #ffffff;
-				color: #21b2a6;
+				color: #070332;
 			}
 
 			.wrapper.style1 ::-webkit-input-placeholder {
@@ -2979,7 +2979,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: #505393;
+			background-color: #0C2D48;
 			color: #d3d4e4;
 		}
 
@@ -3350,7 +3350,7 @@ input, select, textarea {
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: #21b2a6;
+		background: #070332;
 		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
@@ -3813,16 +3813,65 @@ input, select, textarea {
 
 	#main > header {
 		padding: 12em 0 10em 0 ;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/celebritybanner.png");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		text-align: center;
 	}
+/* counsel image split */
+
+	#counselImage > header {
+		padding: 12em 0 10em 0 ;
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/realCounsel.png");
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-align: center;
+}
+
+#counselImage > header h2 {
+	font-size: 1.75em;
+	margin: 0 0 0.5em 0;
+}
+
+#counselImage > header p {
+	color: inherit;
+	letter-spacing: 0.225em;
+	text-transform: uppercase;
+	top: 0;
+}
+
+/* end counsel image split */
+
+/* dead image split */
+
+	#deadImage > header {
+		padding: 12em 0 10em 0 ;
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/deadPageImage.png");
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-align: center;
+}
+
+#deadImage > header h2 {
+	font-size: 1.75em;
+	margin: 0 0 0.5em 0;
+}
+
+#deadImage > header p {
+	color: inherit;
+	letter-spacing: 0.225em;
+	text-transform: uppercase;
+	top: 0;
+}
+
+/* end dead image split */
+
 
 		#main > header h2 {
 			font-size: 1.75em;
@@ -3964,7 +4013,7 @@ input, select, textarea {
 
 	body.landing #page-wrapper {
 		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/cardio.png");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		background-attachment: fixed;
@@ -3984,10 +4033,10 @@ input, select, textarea {
 
 	body.is-mobile.landing #banner,
 	body.is-mobile.landing .wrapper.style4 {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/counsel.png");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/counsel.png");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/celebritybanner.png");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/celebritybanner.png");
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -4060,7 +4109,7 @@ html, body {
   border-top-left-radius: 4px;
 }
 .inbox aside li:hover {
-  background: #30ccbe;
+  background: #070332;
 }
 .inbox main {
   background: #EDF2F4;

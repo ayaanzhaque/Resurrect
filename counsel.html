@@ -67,6 +67,9 @@
 					            <h2 class="mb-4">Your Map</h2>
 					          </div>
 					        </div>
+
+
+
 					        <div id="map"></div>
 					        <script src="js/google-map.js"></script>
 					        <script async defer
@@ -84,7 +87,7 @@
     </style>
   </head>
   <body>
-
+    <h3>My Google Maps Demo</h3>
     <!--The div element for the map -->
     <div id="map"></div>
     <script>
@@ -96,9 +99,6 @@ function initMap() {
   var anne = {lat: 37.549, lng: -121.982};
   var williams = {lat: 37.377, lng: -121.926};
   var rayna = {lat: 37.263, lng: -122.038};
-
-	var icons = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png';
-
   // The map, centered at Uluru
   var map = new google.maps.Map(
       document.getElementById('map'), {zoom: 9.65, center: shereen});
@@ -113,13 +113,12 @@ function initMap() {
       '<p><b>Bio Message:</b> I specialize in Jungian Psychotherapy, Aging & Caregiving, and Expressive Arts in my Therapy Treatments'+
     '</div>'+
       '</div>';
-			var infowindow1 = new google.maps.InfoWindow({
-				content: contentString1
-			});
-  var marker1 = new google.maps.Marker({position: kathleen, map: map});
+  var marker1 = new google.maps.Marker({position: shereen, map: map});
 
 
-
+      var infowindow1 = new google.maps.InfoWindow({
+        content: contentString1
+      });
 			marker1.addListener('click', function() {
         infowindow1.open(map, marker1);
       });
@@ -246,6 +245,7 @@ function initMap() {
 							            <span class="price"><sup>$</sup> <span class="number">0<small class="per">/mo</small></span>
 							            <span class="excerpt d-block">100% free. Forever</span>
 							            <h3 class="heading-2 mb-3">Enjoy All The Features</h3>
+
 							            <ul class="pricing-text mb-4">
 							              <li><strong>150 GB</strong> Bandwidth</li>
 							              <li><strong>100 GB</strong> Storage</li>
@@ -263,6 +263,7 @@ function initMap() {
 							            <span class="price"><sup>$</sup> <span class="number">19<small class="per">/mo</small></span></span>
 							            <span class="excerpt d-block">All features are included</span>
 							            <h3 class="heading-2 mb-3">Enjoy All The Features</h3>
+
 							            <ul class="pricing-text mb-4">
 							              <li><strong>450 GB</strong> Bandwidth</li>
 							              <li><strong>400 GB</strong> Storage</li>
@@ -280,6 +281,7 @@ function initMap() {
 							            <span class="price"><sup>$</sup> <span class="number">49<small class="per">/mo</small></span></span>
 							            <span class="excerpt d-block">All features are included</span>
 							            <h3 class="heading-2 mb-3">Enjoy All The Features</h3>
+
 							            <ul class="pricing-text mb-4">
 							              <li><strong>250 GB</strong> Bandwidth</li>
 							              <li><strong>200 GB</strong> Storage</li>
@@ -297,6 +299,7 @@ function initMap() {
 							            <span class="price"><sup>$</sup> <span class="number">99<small class="per">/mo</small></span></span>
 							            <span class="excerpt d-block">All features are included</span>
 							            <h3 class="heading-2 mb-3">Enjoy All The Features</h3>
+
 							            <ul class="pricing-text mb-4">
 							              <li><strong>450 GB</strong> Bandwidth</li>
 							              <li><strong>400 GB</strong> Storage</li>
@@ -307,6 +310,7 @@ function initMap() {
 						            </div>
 						          </div>
 						        </div>
+
 					-->
 						      </div>
 					    	</div>
