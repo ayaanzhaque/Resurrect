@@ -1,6 +1,3 @@
-# Copyright (c) 2019-present, HuggingFace Inc.
-# All rights reserved. This source code is licensed under the BSD-style license found in the
-# LICENSE file in the root directory of this source tree.
 from typing import Any, Dict, List, Optional
 from collections import defaultdict
 from datetime import datetime
@@ -14,7 +11,6 @@ import socket
 from itertools import chain
 import warnings
 import torch.nn.functional as F
-
 
 import torch
 from torch.utils.data import DataLoader, TensorDataset
@@ -52,7 +48,6 @@ def download_pretrained_model():
 
 
 def get_dataset(tokenizer, dataset_path, dataset_cache):
-    """ Get tokenized PERSONACHAT dataset from S3 or cache."""
     dataset_path = dataset_path or PERSONACHAT_URL
     dataset_cache = (
         dataset_cache + "_" + type(tokenizer).__name__
@@ -130,7 +125,6 @@ def build_input_from_segments(
 
 
 def pad_dataset(dataset: Dict[str, Any], padding: int = 0):
-    """ Pad the dataset. This could be optimized by defining a Dataset class and padding at the batch level, but this is simpler. """
     max_l = max(len(x) for x in dataset["input_ids"])
     print("===============================================================")
     print("max_l:  ", str(max_l))
@@ -209,9 +203,7 @@ def get_data_loaders(
                     (-1, datasets[dataset_name]["n_candidates"]) + tensor.shape[1:]
                 )
             else:
-                # FIXME:: THERE IS A LARGER PROBLEM HERE, BUT SOMETIMES THE SIZE OF THIS LABEL
-                # ARRAY IS WRONG, I'm just forcing it to the right size here but this
-                # doesn't address the fundamental issue.
+                # having errors here
                 print(tensor_datasets[dataset_name][0].shape[0])
                 tensor = tensor[: tensor_datasets[dataset_name][0].shape[0]]
             tensor_datasets[dataset_name].append(tensor)
