@@ -1,4 +1,9 @@
 <!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 	<head>
 		<title>Generic - Spectral by HTML5 UP</title>
@@ -6,6 +11,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+
 	</head>
 	<body class="is-preload">
 
@@ -51,91 +58,95 @@
 						</div>
 							<!--End Website Toolbox Forum Embed Code-->
 
+							<section class="ftco-section bg-light">
+					    	<div class="container">
+					    		<div class="row justify-content-center mb-5 pb-3">
+					          <div class="col-md-7 text-center heading-section ftco-animate">
+					            <h2 class="mb-4">Your Map</h2>
+					          </div>
+					        </div>
 
-							<script async defer
-							src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaM3yPKQbeD8SIs8-WNrM_Tt1rgTb5u3g&callback=initMap">
-							</script>
-							</body>
-							</html>
-												<!-- ORIGINAL CODE FROM TEMPLATE MAY BE USEFUL LATER
-														<div class="row d-flex">
-															<div class="col-lg-3 col-md-6 ftco-animate">
-																<div class="block-7">
-																	<div class="text-center">
-																		<h2 class="heading">Free</h2>
-																		<span class="price"><sup>$</sup> <span class="number">0<small class="per">/mo</small></span>
-																		<span class="excerpt d-block">100% free. Forever</span>
-																		<h3 class="heading-2 mb-3">Enjoy All The Features</h3>
 
-																		<ul class="pricing-text mb-4">
-																			<li><strong>150 GB</strong> Bandwidth</li>
-																			<li><strong>100 GB</strong> Storage</li>
-																			<li><strong>$1.00 / GB</strong> Overages</li>
-																			<li>All features</li>
-																		</ul>
-																		<a href="#" class="btn btn-primary d-block px-3 py-3 mb-4">Choose Plan</a>
-																	</div>
-																</div>
-															</div>
-															<div class="col-lg-3 col-md-6 ftco-animate">
-																<div class="block-7">
-																	<div class="text-center">
-																		<h2 class="heading">Startup</h2>
-																		<span class="price"><sup>$</sup> <span class="number">19<small class="per">/mo</small></span></span>
-																		<span class="excerpt d-block">All features are included</span>
-																		<h3 class="heading-2 mb-3">Enjoy All The Features</h3>
 
-																		<ul class="pricing-text mb-4">
-																			<li><strong>450 GB</strong> Bandwidth</li>
-																			<li><strong>400 GB</strong> Storage</li>
-																			<li><strong>$2.00 / GB</strong> Overages</li>
-																			<li>All features</li>
-																		</ul>
-																		<a href="#" class="btn btn-primary d-block px-3 py-3 mb-4">Choose Plan</a>
-																	</div>
-																</div>
-															</div>
-															<div class="col-lg-3 col-md-6 ftco-animate">
-																<div class="block-7">
-																	<div class="text-center">
-																		<h2 class="heading">Premium</h2>
-																		<span class="price"><sup>$</sup> <span class="number">49<small class="per">/mo</small></span></span>
-																		<span class="excerpt d-block">All features are included</span>
-																		<h3 class="heading-2 mb-3">Enjoy All The Features</h3>
-
-																		<ul class="pricing-text mb-4">
-																			<li><strong>250 GB</strong> Bandwidth</li>
-																			<li><strong>200 GB</strong> Storage</li>
-																			<li><strong>$5.00 / GB</strong> Overages</li>
-																			<li>All features</li>
-																		</ul>
-																		<a href="#" class="btn btn-primary d-block px-3 py-3 mb-4">Choose Plan</a>
-																	</div>
-																</div>
-															</div>
-															<div class="col-lg-3 col-md-6 ftco-animate">
-																<div class="block-7">
-																	<div class="text-center">
-																		<h2 class="heading">Pro</h2>
-																		<span class="price"><sup>$</sup> <span class="number">99<small class="per">/mo</small></span></span>
-																		<span class="excerpt d-block">All features are included</span>
-																		<h3 class="heading-2 mb-3">Enjoy All The Features</h3>
-
-																		<ul class="pricing-text mb-4">
-																			<li><strong>450 GB</strong> Bandwidth</li>
-																			<li><strong>400 GB</strong> Storage</li>
-																			<li><strong>$20.00 / GB</strong> Overages</li>
-																			<li>All features</li>
-																		</ul>
-																		<a href="#" class="btn btn-primary d-block px-3 py-3 mb-4">Choose Plan</a>
-																	</div>
-																</div>
-															</div>
-
-										-->
-														</div>
-													</div>
-												</section>
+					        <div id="map"></div>
+					        <script src="js/google-map.js"></script>
+					        <script async defer
+					        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjWfWoYtAhvc6i9C4V5SekngUKeyXOYoc&callback=initMap">
+					        </script>
+					    <!-- ORIGINAL CODE FROM TEMPLATE MAY BE USEFUL LATER
+					    		<div class="row d-flex">
+						        <div class="col-lg-3 col-md-6 ftco-animate">
+						          <div class="block-7">
+						            <div class="text-center">
+							            <h2 class="heading">Free</h2>
+							            <span class="price"><sup>$</sup> <span class="number">0<small class="per">/mo</small></span>
+							            <span class="excerpt d-block">100% free. Forever</span>
+							            <h3 class="heading-2 mb-3">Enjoy All The Features</h3>
+							            <ul class="pricing-text mb-4">
+							              <li><strong>150 GB</strong> Bandwidth</li>
+							              <li><strong>100 GB</strong> Storage</li>
+							              <li><strong>$1.00 / GB</strong> Overages</li>
+							              <li>All features</li>
+							            </ul>
+							            <a href="#" class="btn btn-primary d-block px-3 py-3 mb-4">Choose Plan</a>
+						            </div>
+						          </div>
+						        </div>
+						        <div class="col-lg-3 col-md-6 ftco-animate">
+						          <div class="block-7">
+						            <div class="text-center">
+							            <h2 class="heading">Startup</h2>
+							            <span class="price"><sup>$</sup> <span class="number">19<small class="per">/mo</small></span></span>
+							            <span class="excerpt d-block">All features are included</span>
+							            <h3 class="heading-2 mb-3">Enjoy All The Features</h3>
+							            <ul class="pricing-text mb-4">
+							              <li><strong>450 GB</strong> Bandwidth</li>
+							              <li><strong>400 GB</strong> Storage</li>
+							              <li><strong>$2.00 / GB</strong> Overages</li>
+							              <li>All features</li>
+							            </ul>
+							            <a href="#" class="btn btn-primary d-block px-3 py-3 mb-4">Choose Plan</a>
+						            </div>
+						          </div>
+						        </div>
+						        <div class="col-lg-3 col-md-6 ftco-animate">
+						          <div class="block-7">
+						            <div class="text-center">
+							            <h2 class="heading">Premium</h2>
+							            <span class="price"><sup>$</sup> <span class="number">49<small class="per">/mo</small></span></span>
+							            <span class="excerpt d-block">All features are included</span>
+							            <h3 class="heading-2 mb-3">Enjoy All The Features</h3>
+							            <ul class="pricing-text mb-4">
+							              <li><strong>250 GB</strong> Bandwidth</li>
+							              <li><strong>200 GB</strong> Storage</li>
+							              <li><strong>$5.00 / GB</strong> Overages</li>
+							              <li>All features</li>
+							            </ul>
+							            <a href="#" class="btn btn-primary d-block px-3 py-3 mb-4">Choose Plan</a>
+						            </div>
+						          </div>
+						        </div>
+						        <div class="col-lg-3 col-md-6 ftco-animate">
+						          <div class="block-7">
+						            <div class="text-center">
+							            <h2 class="heading">Pro</h2>
+							            <span class="price"><sup>$</sup> <span class="number">99<small class="per">/mo</small></span></span>
+							            <span class="excerpt d-block">All features are included</span>
+							            <h3 class="heading-2 mb-3">Enjoy All The Features</h3>
+							            <ul class="pricing-text mb-4">
+							              <li><strong>450 GB</strong> Bandwidth</li>
+							              <li><strong>400 GB</strong> Storage</li>
+							              <li><strong>$20.00 / GB</strong> Overages</li>
+							              <li>All features</li>
+							            </ul>
+								          <a href="#" class="btn btn-primary d-block px-3 py-3 mb-4">Choose Plan</a>
+						            </div>
+						          </div>
+						        </div>
+					-->
+						      </div>
+					    	</div>
+					    </section>
 
 
 
@@ -161,6 +172,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="node_modules/xterm/lib/xterm.js"></script>
+			<script src-"assets/google-maps.js"></script>
 
 	</body>
 </html>
