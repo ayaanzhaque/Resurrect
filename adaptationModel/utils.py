@@ -207,12 +207,14 @@ def get_data_loaders(
                 print(tensor_datasets[dataset_name][0].shape[0])
                 tensor = tensor[: tensor_datasets[dataset_name][0].shape[0]]
             tensor_datasets[dataset_name].append(tensor)
-
+    # print training dataset information
     print([x.shape for x in tensor_datasets["train"]])
     logger.info("Build train and validation dataloaders")
     train_dataset = TensorDataset(*tensor_datasets["train"])
     print([x.shape for x in tensor_datasets["valid"]])
     valid_dataset = TensorDataset(*tensor_datasets["valid"])
+
+    # add Pytorch dataloader code
 
     train_sampler = (
         torch.utils.data.distributed.DistributedSampler(train_dataset)
@@ -387,6 +389,7 @@ def make_one_prediction(
     temperature: float = 0.7,
     max_length: int = 25
 ):
+    # create model, include tokenizer and train model, add GPU
     tokenizer = tokenizer_class.from_pretrained(model_checkpoint)
     model = model_class.from_pretrained(model_checkpoint)
     model.to(device)
