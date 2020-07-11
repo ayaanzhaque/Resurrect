@@ -1,5 +1,3 @@
-# Copyright (c) 2019-present, HuggingFace Inc.
-# All rights reserved. This source code is licensed under the BSD-style license found in the LICENSE file in the root directory of this source tree.
 from typing import Any, Dict, List
 import os
 import math
@@ -122,9 +120,7 @@ def build_input_from_segments(
 
 def get_data_loaders(args, tokenizer):
     """ Prepare the dataset for training and evaluation """
-    print("here!!!!")
     print(args.dataset_path)
-    print("here!!!")
     personachat = get_dataset(tokenizer, args.dataset_path, args.dataset_cache)
 
     logger.info("Build inputs and labels")
@@ -171,9 +167,7 @@ def get_data_loaders(args, tokenizer):
                     (-1, datasets[dataset_name]["n_candidates"]) + tensor.shape[1:]
                 )
             else:
-                # FIXME:: THERE IS A LARGER PROBLEM HERE, BUT SOMETIMES THE SIZE OF THIS LABEL
-                # ARRAY IS WRONG, I'm just forcing it to the right size here but this
-                # doesn't address the fundamental issue.
+                # error line here
                 print(tensor_datasets[dataset_name][0].shape[0])
                 tensor = tensor[: tensor_datasets[dataset_name][0].shape[0]]
             tensor_datasets[dataset_name].append(tensor)
@@ -225,7 +219,7 @@ def train():
     parser.add_argument(
         "--dataset_path",
         type=str,
-        default="/Users/tetracycline/repos/convai/data/counsel_chat_250-tokens_full.json",
+        default=".data/counsel_chat_250-tokens_full.json",
         help="Path or url of the dataset. If empty download from S3.",
     )
     parser.add_argument(
