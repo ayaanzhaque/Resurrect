@@ -68,11 +68,10 @@
 													<h3>Juice<br>Wrld</h3>
 													<p>Rapper</p>
 													<ul class="actions stacked">
-														<li><a href="#" class="button primary fit">Chat</a></li>
+														<button class="button primary fit" type="button" onClick="showJuice()">Chat</button>
 													</ul>
 												</center>
 												</div>
-
 
 												<div class="col-3">
 													<span class="image fit"><img src="images/kobe.png" alt="" /></span>
@@ -80,7 +79,7 @@
 													<h3>Kobe<br>Bryant</h3>
 													<p>NBA Legend</p>
 													<ul class="actions stacked">
-														<li><a href="#" class="button primary fit">Chat</a></li>
+														<button class="button primary fit" type="button" onClick="showKobe()">Chat</button>
 													</ul>
 												</center>
 												</div>
@@ -91,7 +90,7 @@
 													<h3>Paul<br>Walker</h3>
 													<p>American Actor</p>
 													<ul class="actions stacked">
-														<li><a href="#" class="button primary fit">Chat</a></li>
+														<button class="button primary fit" type="button" onClick="showPaul()">Chat</button>
 													</ul>
 												</center>
 												</div>
@@ -102,7 +101,7 @@
 													<h3>José<br>Fernández</h3>
 													<p>MLB Player</p>
 													<ul class="actions stacked">
-														<li><a href="#" class="button primary fit">Chat</a></li>
+														<button class="button primary fit" type="button" onClick="showJose()">Chat</button>
 													</ul>
 												</center>
 												</div>
@@ -111,18 +110,49 @@
 										</div>
 									</section>
 
-									<section class="ftco-section">
+									<script>
+									function showJuice() {
+
+										document.getElementById('celebChat').style.display = "block";
+										document.getElementById("speakTo").textContent = "Speak to Juice Wrld";
+										document.getElementById('celebIFRAME').contentDocument.location.reload(true);
+
+									}
+
+									function showKobe() {
+
+										document.getElementById('celebChat').style.display = "block";
+										document.getElementById("speakTo").textContent = "Speak to Kobe Bryant";
+										document.getElementById('celebIFRAME').contentDocument.location.reload(true);
+									}
+
+									function showPaul() {
+
+										document.getElementById('celebChat').style.display = "block";
+										document.getElementById("speakTo").textContent = "Speak to Paul Walker";
+										document.getElementById('celebIFRAME').contentDocument.location.reload(true);
+									}
+
+									function showJose() {
+
+										document.getElementById('celebChat').style.display = "block";
+										document.getElementById("speakTo").textContent = "Speak to José Fernández";
+										document.getElementById('celebIFRAME').contentDocument.location.reload(true);
+										
+									}
+
+									</script>
+
+									<div id="celebChat" class="celebChatStyle" style="display: none">
 										<center>
 										<header>
-											<h2>Talk to waaahy humans</h2>
-											<p>waaaahhhhh</p>
+											<h2 id="speakTo">Speak to Juice Wrld</h2>
 										</header>
 									</center>
 										<center>
-											<iframe src="https://resurrect6442.pythonanywhere.com/celebrity" width="100%" height="600" frameBorder="0"></iframe>
+											<iframe id="celebIFRAME" src="https://resurrect6442.pythonanywhere.com/celebrity" width="100%" height="600" frameBorder="0"></iframe>
 										</center>
-									</section>
-									
+									</div>
 
 									<section>
 										<center>
