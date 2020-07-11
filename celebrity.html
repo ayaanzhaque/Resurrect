@@ -138,7 +138,7 @@
 										document.getElementById('celebChat').style.display = "block";
 										document.getElementById("speakTo").textContent = "Speak to José Fernández";
 										document.getElementById('celebIFRAME').contentDocument.location.reload(true);
-										
+
 									}
 
 									</script>
@@ -190,8 +190,15 @@
 												</div>
 
 												<div class="col-12">
+													<button onclick="myFunction()">Confirm</button>
+													<p id="demo"></p>
+													<script>
+					       			function myFunction() {
+					         		document.getElementById("demo").innerHTML = "</br>Thank you for submitting your report! You should receive an email notification when our system has found a match.";
+					       			}
+					     			</script>
 													<ul class="actions">
-														<li><input type="submit" value="Send Message" class="primary" /></li>
+
 														<li><input type="reset" value="Reset" /></li>
 													</ul>
 												</div>
