@@ -174,16 +174,16 @@
 													<input type="text" name="userEmail" id="idUserEmail" value="" placeholder="Your Email" />
 												</div>
 												<div class="col-12 col-12-xsmall">
-													<input type="text" name="celebProfession" id="celebProfession" value="" placeholder="Celebrity Name (e.g. Kobe Bryant)" />
+													<input type="text" name="celebProfession" id="idCelebName" value="" placeholder="Celebrity Name (e.g. Kobe Bryant)" />
 												</div>
 												<div class="col-12 col-12-xsmall">
-													<input type="text" name="celebProfession" id="celebProfession" value="" placeholder="Celebrity Profession (e.g. NBA Player)" />
+													<input type="text" name="celebProfession" id="idCelebProfession" value="" placeholder="Celebrity Profession (e.g. NBA Player)" />
 												</div>
 												<div class="col-12 col-12-xsmall">
-													<input type="text" name="celebProfession" id="celebProfession" value="" placeholder="Celebrity Twitter Handle (e.g. kobebryant)" />
+													<input type="text" name="celebProfession" id="idCelebTwitter" value="" placeholder="Celebrity Twitter Handle (e.g. kobebryant)" />
 												</div>
 												<div class="col-12">
-													<select name="demo-category" id="demo-category">
+													<select name="demo-category" id="aliveID">
 														<option value="">*Is the celebrity alive?*</option>
 														<option value="1">Alive</option>
 														<option value="2">Dead</option>
@@ -194,12 +194,62 @@
 													<textarea name="additionalComments" id="idAdditionalComments" placeholder="Additional Comments" rows="6"></textarea>
 												</div>
 
+												<style>
+												.redDiv {
+													display: none;
+													border: 1px solid red;
+												}
+												</style>
+
 												<div class="col-12">
 													<button onclick="myFunction()">Confirm</button>
 													<p id="demo"></p>
+													<p class="redDiv" id="failedDemo"></p>
 													<script>
 					       			function myFunction() {
-					         		document.getElementById("demo").innerHTML = "</br>Thank you for submitting your report! You will receive an email when our system has found a match.";
+
+												var givenName = document.getElementById("idUserName").value;
+												var givenEmail = document.getElementById("idUserEmail").value;
+												var celebName = document.getElementById("idCelebName").value;
+												var celebProf = document.getElementById("idCelebProfession").value;
+												var celebTwitter = document.getElementById("idCelebTwitter").value;
+
+												var a = document.getElementById("aliveID");
+												var textOne = a.options[a.selectedIndex].text;
+
+												if (givenName == "") {
+													document.getElementById("demo").innerHTML = "";
+													document.getElementById("failedDemo").innerHTML = "Please fill out all questions to submit your report.";
+													document.getElementById("failedDemo").style.display = "block";
+												} else if (givenEmail == "") {
+													document.getElementById("demo").innerHTML = "";
+													document.getElementById("failedDemo").innerHTML = "Please fill out all questions to submit your report.";
+													document.getElementById("failedDemo").style.display = "block";
+												} else if (celebName == "") {
+													document.getElementById("demo").innerHTML = "";
+													document.getElementById("failedDemo").innerHTML = "Please fill out all questions to submit your report.";
+													document.getElementById("failedDemo").style.display = "block";
+												} else if (celebProf == "") {
+													document.getElementById("demo").innerHTML = "";
+													document.getElementById("failedDemo").innerHTML = "Please fill out all questions to submit your report.";
+													document.getElementById("failedDemo").style.display = "block";
+												} else if (celebTwitter == "") {
+													document.getElementById("demo").innerHTML = "";
+													document.getElementById("failedDemo").innerHTML = "Please fill out all questions to submit your report.";
+													document.getElementById("failedDemo").style.display = "block";
+												} else if (textOne == "*Is the celebrity alive?*") {
+												document.getElementById("demo").innerHTML = "";
+												document.getElementById("failedDemo").innerHTML = "Please fill out all questions to submit your report.";
+												document.getElementById("failedDemo").style.display = "block";
+												} else {
+													document.getElementById("demo").innerHTML = "</br>Thank you for submitting your report! You will receive an email when our system has found a match.";
+													document.getElementById("failedDemo").innerHTML = "";
+													document.getElementById("failedDemo").style.border = "1px solid white";
+												}
+
+
+
+										//	document.getElementById("failedDemo").innerHTML = "</br>Please fill out all questions to submit your report.";
 					       			}
 					     			</script>
 													<ul class="actions">
