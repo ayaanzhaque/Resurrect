@@ -160,168 +160,14 @@
 
 
 
-            <style>
-            .accordion > .card {
-              overflow: hidden; }
-              .accordion > .card:not(:first-of-type) .card-header:first-child {
-                border-radius: 0; }
-              .accordion > .card:not(:first-of-type):not(:last-of-type) {
-                border-bottom: 0;
-                border-radius: 0; }
-              .accordion > .card:first-of-type {
-                border-bottom: 0;
-                border-bottom-right-radius: 0;
-                border-bottom-left-radius: 0; }
-              .accordion > .card:last-of-type {
-                border-top-left-radius: 0;
-                border-top-right-radius: 0; }
-              .accordion > .card .card-header {
-                margin-bottom: -1px; }
 
-                #accordion .card {
-          margin-bottom: 5px;
-          border: 1px solid #f0f0f0;
-          -webkit-border-radius: 0;
-          -moz-border-radius: 0;
-          -ms-border-radius: 0;
-          border-radius: 0; }
-          #accordion .card .card-header {
-            padding: 0;
-            background: transparent;
-            border-bottom: 1px solid #f0f0f0;
-            -webkit-border-radius: 0;
-            -moz-border-radius: 0;
-            -ms-border-radius: 0;
-            border-radius: 0; }
-            #accordion .card .card-header a {
-              padding: 12px 20px;
-              display: block;
-              font-size: 20px;
-              font-weight: 500;
-              color: #000; }
-              #accordion .card .card-header a span {
-                float: right; }
-                #accordion .card .card-header a span i {
-                  color: #38d39f; }
-
-        #accordion .card-body {
-          border: 1px solid transparent; }
-          #accordion .card-body p {
-            color: #4d4d4d !important; }
-
-        #accordion [aria-expanded="false"] > .expanded, #accordion [aria-expanded="true"] > .collapsed {
-          display: none; }
-
-          .block-8 .accordion-item .heading {
-          font-size: 16px;
-          font-weight: 400;
-          padding: 10px 0; }
-          .block-8 .accordion-item .heading > a {
-            padding-left: 35px;
-            position: relative;
-            color: #000; }
-            .block-8 .accordion-item .heading > a:before {
-              width: 20px;
-              height: 20px;
-              line-height: 18px;
-              border: 1px solid #ccc;
-              text-align: center;
-              font-size: 18px;
-              top: .1em;
-              left: 0; }
-            .block-8 .accordion-item .heading > a[aria-expanded="true"]:before {
-              font-family: 'icomoon';
-              position: absolute;
-              content: "\e316";
-              -webkit-transition: .3s all ease;
-              -o-transition: .3s all ease;
-              transition: .3s all ease;
-              background: #6927ff;
-              color: #fff;
-              border: 1px solid #6927ff; }
-            .block-8 .accordion-item .heading > a[aria-expanded="false"]:before {
-              content: "\e313";
-              color: #ccc;
-              font-family: 'icomoon';
-              position: absolute;
-              -webkit-transition: .3s all ease;
-              -o-transition: .3s all ease;
-              transition: .3s all ease; }
-
-        .block-8 .accordion-item .body-text {
-          font-size: 16px;
-          padding: 5px 0;
-          padding-left: 30px; }
-            </style>
-
-            <!--<section class="ftco-section bg-light">
-                  <div class="container">
-                    <div class="row justify-content-center mb-5">
-                      <div class="col-md-7 text-center heading-section ftco-animate">
-                        <h2 class="mb-4">Frequently Asked Questions (FAQ)</h2>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12 ftco-animate">
-                        <div id="accordion">
-                          <div class="row">
-                            <div class="col-md-6">
-
-                              <div class="card">
-                                <div class="card-header">
-                                  <a class="card-link" data-toggle="collapse"  href="#menutwo" aria-expanded="false" aria-controls="menutwo">Why should cities use our process? <span class="collapsed"><i class="ion-ios-arrow-up"></i></span><span class="expanded"><i class="ion-ios-arrow-down"></i></span></a>
-                                </div>
-                                <div id="menutwo" class="collapse">
-                                  <div class="card-body">
-                                    <p>Cities should use our process because currently, roads are very dangerous, and there isn’t an accurate and efficient process to figure out where roads are risky and how to fix them. Local governments and city planners can use our software to improve their roads in a unique way. They are provided with a heatmap of where crashes in their city can occur and how to address those issues.
-         </p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="card">
-                                <div class="card-header">
-                                  <a class="card-link" data-toggle="collapse"  href="#menu3" aria-expanded="false" aria-controls="menu3">How do we collect data for our model? <span class="collapsed"><i class="ion-ios-arrow-up"></i></span><span class="expanded"><i class="ion-ios-arrow-down"></i></span></a>
-                                </div>
-                                <div id="menu3" class="collapse">
-                                  <div class="card-body">
-                                    <p>We will receive data for our heatmaps from those who witnessed crashes as well as state/local governments. We have found that many cities already collect this data, but won’t release it publicly. Additionally, we would need cities to collect more data, and we have a system to allow residents to report crashes, improving our data collection process.
-        </p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="col-md-6">
-                              <div class="card">
-                                <div class="card-header">
-                                  <a class="card-link" data-toggle="collapse"  href="#menu4" aria-expanded="false" aria-controls="menu4">How can regular people use our website?<span class="collapsed"><i class="ion-ios-arrow-up"></i></span><span class="expanded"><i class="ion-ios-arrow-down"></i></span></a>
-                                </div>
-                                <div id="menu4" class="collapse">
-                                  <div class="card-body">
-                                    <p>Residents can find a map with the hotspots of where crashes are likely. These heatmaps change based on an hourly basis and time of year to account for rush hours and temperature/weather.  The common pedestrian or driver can also help improve the efficiency of our model by inputting data about crashes in their neighborhoods by interactively placing pins on the map, which we aggregate with already provided data.</p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="card">
-                                <div class="card-header">
-                                  <a class="card-link" data-toggle="collapse"  href="#menu5" aria-expanded="false" aria-controls="menu5">How do we generate heatmaps?<span class="collapsed"><i class="ion-ios-arrow-up"></i></span><span class="expanded"><i class="ion-ios-arrow-down"></i></span></a>
-                                </div>
-                                <div id="menu5" class="collapse">
-                                  <div class="card-body">
-                                    <p>Generating heatmaps relies on having both static and updated data. This includes where crashes occur as well as factors such as weather, road curvature, where signs are located, and more. Our model uses supervised learning to then generate coordinates on where it is most risky, which we then render using GeoPandas.</p>
-                                  </div>
-                                </div>
-                              </div>
-
-                </section>
-              -->
 
               <section id="three" class="wrapper style3 special">
                 <div class="inner">
                   <header class="major">
                     <h2>Frequently Asked Questions</h2> </br>
+
+<!-- STARTING SCRIPT -->
                   <script>
                   var ButtonExpand = function (domNode) {
 
@@ -428,11 +274,40 @@ window.addEventListener('load', function (event) {
 
 }, false);
 </script>
+
+<!-- ENDING SCRIPT -->
+
+<!-- START IMPORTANT MODIFIER -->
+
+<style>
+.resetButton {
+all: unset;
+
+padding-top: 20px;
+padding-right: 10px;
+padding-bottom: 20px;
+padding-left: 10px;
+
+
+background-color: #ef5e49;
+border-radius: 20px;
+width: 60%;
+}
+
+.resetButton:hover {
+  border-color: white;
+}
+
+
+</style>
                   <dl class="faq">
   <dt>
-    <button aria-expanded="false" aria-controls="faq1_desc" class = "button primary" >
-      How do you develop an adaptation just like my loved one?
+
+
+    <button aria-expanded="false" aria-controls="faq1_desc" class="resetButton">
+      &#9660; How do you develop an adaptation just like my loved one? &#9660;
     </button>
+
   </dt>
   <p> </p>
   <dd>
@@ -441,8 +316,8 @@ window.addEventListener('load', function (event) {
     </p>
   </dd>
   <dt>
-    <button aria-expanded="false" aria-controls="faq2_desc" class = "button primary">
-      How are you developing adaptations for famous people?
+    <button aria-expanded="false" aria-controls="faq2_desc" class="resetButton">
+      &#9660; How are you developing adaptations for famous people? &#9660;
     </button>
   </dt>
   <p> </p>
@@ -452,8 +327,8 @@ window.addEventListener('load', function (event) {
     </p>
   </dd>
   <dt>
-    <button aria-expanded="false" aria-controls="faq3_desc" class = "button primary">
-      Is the counselor chat with a real counselor?
+    <button aria-expanded="false" aria-controls="faq3_desc" class="resetButton">
+      &#9660; Is the counselor chat with a real counselor? &#9660;
     </button>
   </dt>
   <p></p>
@@ -463,8 +338,8 @@ window.addEventListener('load', function (event) {
     </p>
   </dd>
   <dt>
-    <button aria-expanded="false" aria-controls="faq4_desc" class = "button primary">
-      How did you develop these adaptations?
+    <button aria-expanded="false" aria-controls="faq4_desc" class="resetButton">
+      &#9660; How did you develop these adaptations? &#9660;
     </button>
   </dt>
   <p></p>
@@ -475,6 +350,10 @@ window.addEventListener('load', function (event) {
   </dd>
 </dl>
                 </section>
+
+
+
+
 				<!-- Footer -->
 					<footer id="footer">
 						<h2>Resurrect</h2>
