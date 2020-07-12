@@ -108,31 +108,30 @@
 									<script>
 									function showJuice() {
 
-										document.getElementById('celebChat').style.display = "block";
+										document.getElementById('celebChat').style.display = "none";
 										document.getElementById("speakTo").textContent = "Speak to Juice Wrld";
-										document.getElementById('celebIFRAME').contentDocument.location.reload(true);
-
+										document.getElementById('comingSoon').style.display = "block";
 									}
 
 									function showKobe() {
 
 										document.getElementById('celebChat').style.display = "block";
 										document.getElementById("speakTo").textContent = "Speak to Kobe Bryant";
-										document.getElementById('celebIFRAME').contentDocument.location.reload(true);
+										document.getElementById('comingSoon').style.display = "none";
 									}
 
 									function showPaul() {
 
-										document.getElementById('celebChat').style.display = "block";
+										document.getElementById('celebChat').style.display = "none";
 										document.getElementById("speakTo").textContent = "Speak to Paul Walker";
-										document.getElementById('celebIFRAME').contentDocument.location.reload(true);
+										document.getElementById('comingSoon').style.display = "block";
 									}
 
 									function showJose() {
 
-										document.getElementById('celebChat').style.display = "block";
+										document.getElementById('celebChat').style.display = "none";
 										document.getElementById("speakTo").textContent = "Speak to José Fernández";
-										document.getElementById('celebIFRAME').contentDocument.location.reload(true);
+										document.getElementById('comingSoon').style.display = "block";
 
 									}
 
@@ -147,6 +146,18 @@
 										<center>
 											<iframe id="celebIFRAME" src="https://resurrect6442.pythonanywhere.com/celebrity" width="100%" height="600" frameBorder="0"></iframe>
 										</center>
+									</div>
+									<style>
+									.comingSoonStyle {
+										color: black;
+										border: 1px solid #0C2D48;
+									}
+									</style>
+
+									<div id="comingSoon" style="display: none">
+										<center>
+										<p class="comingSoonStyle">This celebrity's generative model is coming soon.</p>
+									</center>
 									</div>
 
 									<section>
