@@ -318,7 +318,163 @@
                 </section>
               -->
 
+              <section id="three" class="wrapper style3 special">
+                <div class="inner">
+                  <header class="major">
+                    <h2>Frequently Asked Questions</h2> </br>
+                  <script>
+                  var ButtonExpand = function (domNode) {
 
+  this.domNode = domNode;
+
+  this.keyCode = Object.freeze({
+    'RETURN': 13
+  });
+};
+
+ButtonExpand.prototype.init = function () {
+
+  this.controlledNode = false;
+
+  var id = this.domNode.getAttribute('aria-controls');
+
+  if (id) {
+    this.controlledNode = document.getElementById(id);
+  }
+
+  this.domNode.setAttribute('aria-expanded', 'false');
+  this.hideContent();
+
+  this.domNode.addEventListener('keydown',    this.handleKeydown.bind(this));
+  this.domNode.addEventListener('click',      this.handleClick.bind(this));
+  this.domNode.addEventListener('focus',      this.handleFocus.bind(this));
+  this.domNode.addEventListener('blur',       this.handleBlur.bind(this));
+
+};
+
+ButtonExpand.prototype.showContent = function () {
+
+  if (this.controlledNode) {
+    this.controlledNode.style.display = 'block';
+  }
+
+};
+
+ButtonExpand.prototype.hideContent = function () {
+
+  if (this.controlledNode) {
+    this.controlledNode.style.display = 'none';
+  }
+
+};
+
+ButtonExpand.prototype.toggleExpand = function () {
+
+  if (this.domNode.getAttribute('aria-expanded') === 'true') {
+    this.domNode.setAttribute('aria-expanded', 'false');
+    this.hideContent();
+  }
+  else {
+    this.domNode.setAttribute('aria-expanded', 'true');
+    this.showContent();
+  }
+
+};
+
+/* EVENT HANDLERS */
+
+ButtonExpand.prototype.handleKeydown = function (event) {
+
+  console.log('[keydown]');
+
+  switch (event.keyCode) {
+
+    case this.keyCode.RETURN:
+
+      this.toggleExpand();
+
+      event.stopPropagation();
+      event.preventDefault();
+      break;
+
+    default:
+      break;
+  }
+
+};
+
+ButtonExpand.prototype.handleClick = function (event) {
+  this.toggleExpand();
+};
+
+ButtonExpand.prototype.handleFocus = function (event) {
+  this.domNode.classList.add('focus');
+};
+
+ButtonExpand.prototype.handleBlur = function (event) {
+  this.domNode.classList.remove('focus');
+};
+
+/* Initialize Hide/Show Buttons */
+
+window.addEventListener('load', function (event) {
+
+  var buttons =  document.querySelectorAll('button[aria-expanded][aria-controls]');
+
+  for (var i = 0; i < buttons.length; i++) {
+    var be = new ButtonExpand(buttons[i]);
+    be.init();
+  }
+
+}, false);
+</script>
+                  <dl class="faq">
+  <dt>
+    <button aria-expanded="false" aria-controls="faq1_desc" class = "button primary" >
+      How do you develop an adaptation just like my loved one?
+    </button>
+  </dt>
+  <p> </p>
+  <dd>
+    <p id="faq1_desc" class="desc">
+      We ask you to export a csv of your conversations with your loved one, which can be done by connecting your phone to your computer. If you like, we will ask you for an audio file, which we will use to make the adaptation read out your messages in your preferred voice.
+    </p>
+  </dd>
+  <dt>
+    <button aria-expanded="false" aria-controls="faq2_desc" class = "button primary">
+      How are you developing adaptations for famous people?
+    </button>
+  </dt>
+  <p> </p>
+  <dd>
+    <p id="faq2_desc" class="desc">
+      Unlike the personal adaptation, we web scrape the famous persons twitter to get a sense of their personality and texting style through their tweets. This allows you to have a conversation with the celebrity, which will sound like the way they tweet.
+    </p>
+  </dd>
+  <dt>
+    <button aria-expanded="false" aria-controls="faq3_desc" class = "button primary">
+      Is the counselor chat with a real counselor?
+    </button>
+  </dt>
+  <p></p>
+  <dd>
+    <p id="faq3_desc" class="desc">
+      No, we web scrape counselchat.com, a forum for experienced counselors to provide advice and support to individuals. We believe an AI counselor adaptation is a good option since it is trained on information from real counselors. This allows anyone to receive high-quality counseling whenever they need it.
+    </p>
+  </dd>
+  <dt>
+    <button aria-expanded="false" aria-controls="faq4_desc" class = "button primary">
+      How did you develop these adaptations?
+    </button>
+  </dt>
+  <p></p>
+  <dd>
+    <p id="faq4_desc" class="desc">
+      We created generative NLP models. These bots input different datasets, which can be a text conversation, tweets, or counselor posts, and we train different bots to meet each of these tasks. They are trained using Python, and they use high-level neural networks such as BERT and DistilledBERT.
+    </p>
+  </dd>
+</dl>
+                </section>
 				<!-- Footer -->
 					<footer id="footer">
 						<h2>Resurrect</h2>
