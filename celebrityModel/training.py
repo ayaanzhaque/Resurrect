@@ -88,7 +88,7 @@ def add_special_tokens_(model, tokenizer):
 def build_input_from_segments(
     persona, history, reply, tokenizer, lm_labels: bool = False, with_eos: bool = True
 ):
-    """ Build a sequence of input from 3 segments: persona, history and last reply. """
+    """ Build a sequence of input from 3 segments: tweet body, date of tweet, and if it was a retweet or responsive to a tweet. """
     # Gets the special token values
     bos, eos, speaker1, speaker2 = tokenizer.convert_tokens_to_ids(SPECIAL_TOKENS[:-1])
 
@@ -133,7 +133,7 @@ def get_data_loaders(args, tokenizer):
         if args.num_candidates > 0 and dataset_name == "train":
             num_candidates = min(args.num_candidates, num_candidates)
         for dialog in dataset:
-            persona = dialog["personality"].copy()
+            persona = dialog["tweet_body"].copy()
             for _ in range(args.personality_permutations):
                 for utterance in dialog["utterances"]:
                     history = utterance["history"][-(2 * args.max_history + 1) :]
@@ -272,10 +272,10 @@ def train():
         "--n_epochs", type=int, default=3, help="Number of training epochs"
     )
     parser.add_argument(
-        "--personality_permutations",
+        "--tweet_body_permutations",
         type=int,
         default=1,
-        help="Number of permutations of personality sentences",
+        help="Number of permutations of tweet_body sentences",
     )
     parser.add_argument(
         "--eval_before_start",
