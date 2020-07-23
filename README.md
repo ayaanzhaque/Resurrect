@@ -2,6 +2,10 @@
 
 # [Resurrect](https://resurrect.space/)
 
+- **Sponser Award @ MLH Summer League NHWT 2020**
+
+- **Best Server @ Hack3 2020**
+
 Demo: https://youtu.be/Vp4W7t_lM14
 
 Devpost: https://devpost.com/software/resurrect
