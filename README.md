@@ -2,7 +2,7 @@
 
 # [Resurrect](https://resurrect.space/)
 
-- **Sponser Award @ MLH Summer League NHWT 2020**
+- **Sponser Prize Winner @ MLH Summer League NHWT 2020**
 
 - **Best Server @ Hack3 2020**
 
